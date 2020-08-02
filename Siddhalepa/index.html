@@ -1,0 +1,453 @@
+<!doctype html>
+<html lang="en-GB" dir="ltr">
+<head>
+    <meta charset="utf-8">
+    <title>Kithul Jaggery</title>
+    <!--[if IE ]>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <![endif]-->
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        article, aside, details, figcaption, figure, footer, header, nav, section {
+            display: block
+        }
+
+        html {
+            font-size: 100%;
+            overflow-y: scroll;
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%
+        }
+
+        body {
+            margin: 0;
+            line-height: 1.231
+        }
+
+        body, button, input, select, textarea {
+            font-family: sans-serif;
+            color: #222
+        }
+
+        a {
+            color: #D4AC0D;
+            text-decoration: none
+        }
+
+        a:hover, a:visited {
+            color: #D4AC0D;
+        }
+
+        a:focus {
+            outline: thin dotted
+        }
+
+        a:active, a:hover {
+            outline: 0
+        }
+
+        abbr {
+            border-bottom: 1px dotted
+        }
+
+        strong {
+            font-weight: 700
+        }
+
+        blockquote {
+            margin: 1em 40px;
+            font-style: italic
+        }
+
+        hr {
+            display: block;
+            height: 1px;
+            border: 0;
+            border-top: 1px solid #ccc;
+            margin: 1em 0;
+            padding: 0
+        }
+
+        code, kbd, pre, samp {
+            font-family: monospace, monospace;
+            _font-family: 'courier new', monospace;
+            font-size: 1em
+        }
+
+        pre {
+            white-space: pre;
+            word-wrap: break-word
+        }
+
+        q {
+            quotes: none
+        }
+
+        q:after, q:before {
+            content: "";
+        }
+
+        small {
+            font-size: 85%
+        }
+
+        sub, sup {
+            font-size: 75%;
+            line-height: 0;
+            position: relative;
+            vertical-align: baseline
+        }
+
+        sup {
+            top: -.5em
+        }
+
+        sub {
+            bottom: -.25em
+        }
+
+        ol, ul {
+            margin: 1em 0;
+            padding: 0 0 0 40px
+        }
+
+        nav ol, nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0
+        }
+
+        img {
+            padding: 10px 0;
+            border: 0;
+            -ms-interpolation-mode: bicubic;
+            vertical-align: middle;
+            max-width: 100%
+        }
+
+        figure {
+            margin: 0
+        }
+
+        figcaption {
+            text-align: center
+        }
+
+        table {
+            border-collapse: collapse;
+            border-spacing: 0
+        }
+
+        td {
+            vertical-align: top
+        }
+
+        small {
+            color: #D4AC0D;
+            text-decoration: none
+        }
+
+        body {
+            font: 16px/24px Helvetica, Helvetica Neue, Arial, sans-serif
+        }
+
+        .wrapper {
+            width: 90%;
+            margin: 0 5%;
+        }
+
+        #header-container {
+            border-bottom: 20px solid #D4AC0D
+        }
+
+        #footer-container, #main aside {
+            border-top: 20px solid #D4AC0D
+        }
+
+        #footer-container, #header-container, #main aside {
+            background: #D4AC0D
+        }
+
+        #title {
+            color: #fff
+        }
+
+        ::-moz-selection {
+            background: #D4AC0D;
+            color: #fff;
+            text-shadow: none
+        }
+
+        ::selection {
+            background: #D4AC0D;
+            color: #fff;
+            text-shadow: none
+        }
+
+        nav a {
+            display: block;
+            margin-bottom: 10px;
+            padding: 15px 0;
+            background: #D4AC0D;
+            color: #fff;
+            text-align: center;
+            text-decoration: none;
+            font-weight: 700
+        }
+
+        nav a:hover, nav a:visited {
+            color: #fff
+        }
+
+        nav a:hover {
+            text-decoration: underline
+        }
+
+        #main {
+            padding: 30px 0
+        }
+
+        #main article h1 {
+            font-size: 2em
+        }
+
+        #main aside {
+            color: #fff;
+            padding: 0 5% 10px
+        }
+
+        #footer-container footer {
+            color: #fff;
+            padding: 20px 0
+        }
+
+        .clearfix:after, .clearfix:before {
+            content: "";
+            display: table
+        }
+
+        .clearfix:after {
+            clear: both
+        }
+
+        .clearfix {
+            zoom: 1
+        }
+
+        @media only screen and (min-width: 480px) {
+            nav a {
+                float: left;
+                width: 27%;
+                margin: 0 1.7%;
+                padding: 25px 2%;
+            }
+
+            nav li:first-child a {
+                margin-left: 0
+            }
+
+            nav li:last-child a {
+                margin-right: 0
+            }
+
+            nav ul li {
+                display: inline
+            }
+
+            .oldie nav a {
+                margin: 0 .7%
+            }
+        }
+
+        @media only screen and (min-width: 768px) {
+            #header-container, #main aside {
+                -webkit-box-shadow: 0 5px 10px #aaa;
+                -moz-box-shadow: 0 5px 10px #aaa;
+                box-shadow: 0 5px 10px #aaa
+            }
+
+            #title {
+                float: left
+            }
+
+            nav {
+                float: right;
+                width: 38%
+            }
+
+            #main article {
+                float: left;
+                width: 57%
+            }
+
+            #main aside {
+                float: right;
+                width: 28%
+            }
+        }
+
+        @media only screen and (min-width: 1140px) {
+            .wrapper {
+                width: 1026px;
+                margin: 0 auto
+            }
+        }
+
+        @media print {
+            * {
+                background: transparent !important;
+                color: #000 !important;
+                text-shadow: none !important;
+                filter: none !important;
+                -ms-filter: none !important
+            }
+
+            a, a:visited {
+                text-decoration: underline
+            }
+
+            a[href]:after {
+                content: " (" attr(href) ")"
+            }
+
+            abbr[title]:after {
+                content: " (" attr(title) ")"
+            }
+
+            blockquote, pre {
+                border: 1px solid #999;
+                page-break-inside: avoid
+            }
+
+            thead {
+                display: table-header-group
+            }
+
+            img, tr {
+                page-break-inside: avoid
+            }
+
+            img {
+                max-width: 100% !important
+            }
+
+            @page {
+                margin: .5cm
+            }
+
+            h2, h3, p {
+                orphans: 3;
+                widows: 3
+            }
+
+            h2, h3 {
+                page-break-after: avoid
+            }
+        }</style>
+</head>
+<body>
+
+<div id="header-container">
+    <header class="wrapper clearfix" role="banner">
+        <h1 id="title">Sri Lankan 100% Natural Siddhalepa Ayurvedic Herbal Balm</h1>
+        <nav role="navigation">
+        </nav>
+    </header>
+</div>
+<div id="main-container" itemscope itemtype="http://schema.org/Product">
+    <main id="main" class="wrapper clearfix" role="main">
+        <div itemprop="offers" itemtype="http://schema.org/Offer" itemscope>
+            <meta itemprop="availability" content="https://schema.org/InStock">
+            <meta itemprop="itemCondition" content="https://schema.org/UsedCondition">
+            <div itemprop="seller" itemtype="http://schema.org/Person" itemscope>
+                <meta itemprop="name" content="YOUR NAME">
+            </div>
+        </div>
+        <article>
+            <header>
+                <div class="w3-container w3-center w3-animate-zoom">
+                    <h2 itemprop="name">Siddhalepa Balm for Muscle pain,Cold, Headache and other Pains</h2>
+
+                </div>
+                <br>
+            </header>
+            <section id="Description" itemprop="description">
+                <h3>What is Kithul Jaggery?</h3>
+                <br>
+                <p>
+                    “Kithul” is a Sri Lankan name for a variety of palm that grows in the Asian tropics. It is a species of indigenous flowering plant in the palm family from Sri Lanka, Myanmar and India. ... They are commonly called solitary fishtail palm, toddy palm, wine palm or Jaggery palm.
+                </p>
+
+            </section>
+            <br>
+            <section id="Contact">
+                <h3>Benefits</h3>
+                <br>
+                <p>
+                    Sri Lanka's indigenous system of medicine - Ayurveda - treats kithul jaggery as a very rich food, which can make you gain weight in a healthy way. Ayurveda posits that if you are thin and weak, you will gain weight by eating kithul jaggery, but never gain weight in excess.Rich in calcium, minerals, salts and fiber, this sweet is slower to digest, thus it doesn't provide the rush of energy that refined sugar delivers.Like its South American counterpart, panela, it is said to be a source of iron and vitamins.
+                </p>
+            </section>
+            <br>
+            <section id="Terms">
+                <h3>Users</h3>
+                <br>
+                <p>
+                    Kithul jaggery is the sweetener of Sri Lankan gastronomy. It is kithul jaggery and no other that takes pride of place as the perfect sweet accompaniment to the auspicious dish of milk rice on festive occasions</p>
+                <br>
+                <h4>Payment</h4>
+                <br>
+                <p>
+                    We accept PayPal, MasterCard & Moneybookers..
+                    <br />
+                    <img src="https://secureir.ebaystatic.com/pictures/aw/pics/logos/CC_icons.png" /></p>
+                </p>
+                <br>
+                <h4>Return / Replacement</h4>
+                <br>
+                <p>
+                    Returns accepted if product not as described.
+                    We will try to solve any dispute and try our best to satisfy, if you are not satisfied with our product, please contact first. We will accept any return and give a full refund (without shipping cost) on any item. The item must be returned to us in original condition and Buyer needs to pay the return shipping cost.
+                </p>
+                <br>
+                <h4>Contact Us</h4>
+                <br>
+                <p>
+                    Welcome to contact us at any time if you have any problem, we will do our best to help you and answer the questions in 24 hours. Communication is needed.
+                    PLEASE CONTACT US FIRST BEFORE LEAVE NEGATIVE OR NEUTRAL FEEDBACK. WE WILL TRY OUR BEST TO RESOLVE YOUR PROBLEM.
+
+                <h4>Thanks for understanding.</h4>
+                <img src="https://lh4.googleusercontent.com/MW2gD5bPUN8Vdl8zNSoJz9S9zCIyFQm-gsxemG6H7bgm-riHCohl0tEHzigLSTN6O8oTzqiDT2SFHe3__iyoxtxFgxakpPoqD9hcAH2c" />
+                </p>
+
+
+                </p>
+            </section>
+        </article>
+        <aside role="complementary">
+            <figure>
+                <img src="https://github.com/KasunDissanayake94/KNPBrothers/blob/master/images/1.png" alt="Alternative text for people viewing the listing via a screen reader or other accessibility software.">
+                <figcaption>“Kithul tree” this syrup is a heavenly liquid used as a natural sweetener</figcaption>
+            </figure>
+            <figure>
+                <img src="https://lh4.googleusercontent.com/e4eP-3XVx9aySQhPUVQ4X6r_YE4YYX7yAA_IW60m_B5O36GVid1iyfQfLNDR82mFvLpOSw9kdiCLnZdNWBor-jmm1eX6-UT7o24Nqh3L" alt="Alternative text for people viewing the listing via a screen reader or other accessibility software.">
+                <figcaption>To make jaggery, the kithul sap needs to be boiled passing the point which produces treacle.</figcaption>
+            </figure>
+            <figure>
+                <img src="https://lh5.googleusercontent.com/tnYAn3mWHWYhmDU0V2NqE83JhkmemvKrPERN2w6DNVqDZSUKX_ozvf2Vy-llKemUhu4gQp52WG1aCiIlezj_e6jYo9IIEVP95KwSKfG9" alt="Alternative text for people viewing the listing via a screen reader or other accessibility software.">
+                <figcaption>“Hakuru or jaggery is what we use in place of sugar in everyday life</figcaption>
+            </figure>
+            <figure>
+                <img src="https://lh5.googleusercontent.com/6y_Fj9xpz4OTXQfuV1UqL1ktRqUpME4ZvL433e6UW-eVsG8YTUwAGjAJ5KMMtfjn8cFamiH4AcBcFHQKoWTkv-Obtvkv_Wv5NkTsD-up" alt="Alternative text for people viewing the listing via a screen reader or other accessibility software.">
+                <figcaption>Kitul Honey Treacle Ceylon </figcaption>
+            </figure>
+        </aside>
+    </main>
+</div>
+<div id="footer-container">
+    <footer class="wrapper" role="contentinfo">
+        <small style="color: white">&copy; KnPBrothers</a></small>
+    </footer>
+</div>
+</body>
+</html>
